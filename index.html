@@ -35,15 +35,17 @@
             padding: 10px;
         }
        
-        li{
+        li {
             background-color: rgb(89, 43, 226);
-            padding: auto;
+            padding: 10px;
             margin: 10px;
             display: flex;
             justify-content: space-between;
-            align-items: center ; 
+            align-items: center;
+            color: white;
+            border-radius: 10px;
         }
-
+        
         .containertodo{
             margin: auto;
             padding: 40px;
@@ -64,6 +66,20 @@
         .bodycontent{
             margin: auto;
             font-weight: lighter;
+        }
+        .task {
+            display: flex;
+            align-items: center;
+        }
+        .task.completed {
+            text-decoration: line-through;
+            color: #d3d3d3;
+        }
+
+        .remove-btn {
+            cursor: pointer;
+            margin-left: 10px;
+            color: red;
         }
         
 
@@ -90,18 +106,17 @@
              <button onclick="addTask()"> Add</button>
                      
             </div>
-         </div>
+        
+          </div>
 
-
-
-         <button>All</button>
-         <button>Completed</button>
-         <button>Pending</button>
- 
- 
+        <div>
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </div>
     </div>
    
-    <ul id="taskList"> here will be the tasks </ul>
+    <ul id="taskList"></ul>
     
 
     <script src="index.js"></script>
