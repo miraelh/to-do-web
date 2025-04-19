@@ -18,4 +18,11 @@ function addTask() {
     taskList.appendChild(li);
     taskInput.value = "";
 }
+
+
+
+
+function filterTasks(filter) {
+    const tasks = taskList.getElementsByTagName("li");
+}
     
