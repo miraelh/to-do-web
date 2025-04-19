@@ -16,5 +16,6 @@ function addTask() {
         <button class="remove-btn" onclick="removeTask(this)">🗑️</button>
     `;
     taskList.appendChild(li);
+    taskInput.value = "";
 }
     
