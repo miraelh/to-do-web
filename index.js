@@ -24,5 +24,20 @@ function addTask() {
 
 function filterTasks(filter) {
     const tasks = taskList.getElementsByTagName("li");
+
+    for (let task of tasks) {
+        switch (filter) {
+            case "all":
+                task.style.display = "flex"; 
+                break;
+            case "completed":
+                task.style.display = task.classList.contains("completed") ? "flex" : "none"; 
+                break;
+            case "pending":
+                task.style.display = task.classList.contains("completed") ? "none" : "flex"; 
+                break;
+        }
+    }
+
 }
     
