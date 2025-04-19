@@ -23,6 +23,9 @@ function toggleComplete(span) {
     span.parentElement.classList.toggle("completed");
 }
 
+function removeTask(button) {
+    button.parentElement.remove();
+}
 
 
 function filterTasks(filter) {
