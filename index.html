@@ -48,12 +48,13 @@
         }
         
         .containertodo{
-            margin: auto;
+            margin: 75px auto;
             padding: 40px;
             color: rgb(0, 0, 0);
             background-color: rgba(143, 188, 152, 0.46);
             text-align: center;
             border-radius: 100px;
+            max-width: 500px;
         }
 
         .header{
@@ -67,6 +68,7 @@
         .bodycontent{
             margin: auto;
             font-weight: lighter;
+            max-width: 700px;
         }
         .task {
             display: flex;
@@ -104,25 +106,20 @@
 </head>
 <body>
 
-    <div class="bodycontent">
-        Hiiii
-    </div>  
-
 
     <div class="containertodo">
         <div class="header">
             To-do List           
         </div>
      
-        <div class="bodycontent">
+    
             <div class="containerinput">
            
              <input type="text" id="taskToAdd" placeholder="Add a new task...">
              <button class="add-button" onclick="addTask()"> Add</button>
                      
             </div>
-        
-          </div>
+
 
         <div>
             <button onclick="filterTasks('all')">All</button>
@@ -131,8 +128,9 @@
         </div>
     </div>
    
-    <ul id="taskList"></ul>
-    
+    <div class="bodycontent">
+        <ul id="taskList"></ul>
+    </div>
 
     <script src="index.js"></script>
 
