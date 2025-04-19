@@ -19,6 +19,9 @@ function addTask() {
     taskInput.value = "";
 }
 
+function toggleComplete(span) {
+    span.parentElement.classList.toggle("completed");
+}
 
 
 
